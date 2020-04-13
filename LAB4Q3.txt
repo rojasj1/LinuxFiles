@@ -1,0 +1,14 @@
+#!/bin/bash
+df -P | awk '{ print $1, $5 }' | while read OUTPUT
+do
+TheDate="$(date +%Y)"
+percent=$(echo $OUTPUT | awk '{ print $2 }' |sed s/regexp/)
+if [[ "$percent" -gt 10 ]]
+
+then
+        $percent >> logfile.$TheDate
+fi
+done
+
+
+

@@ -1,0 +1,9 @@
+# !/bin/bash
+
+# Take user Input
+echo "Enter Two numbers : "
+read a
+read b
+# calulator operations
+  res=`echo $a + $b | bc`
+echo "Your Total is: $res"

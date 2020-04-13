@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Check if file is accepted and display status"
+echo "---------------------------------------------"
+echo -n "Enter filename: "
+read filename
+if [[  -e $filename  ]];  then
+        echo "file available and here is the status: "
+        echo "========================================"
+        echo "Status"
+        echo "======================================== "
+        echo "$(ls $filename -l)"
+        echo "======================================== "
+else
+        echo "DNE"
+fi

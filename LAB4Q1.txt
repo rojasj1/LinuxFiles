@@ -1,0 +1,12 @@
+#!/bin/bash
+df -P | awk '{ print $1, $5 }' | while read OUTPUT
+do
+percent=$(echo $OUTPUT | awk '{ print $2 }' | sed 's/%/ /g')
+if [[ "$percent" -gt 10 ]]
+        echo $percent >> logfile.txt
+        echo $(date) >> logfile.txt
+then
+     echo  "Sleep"
+     sleep 5;
+fi
+done

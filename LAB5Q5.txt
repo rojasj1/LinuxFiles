@@ -1,0 +1,8 @@
+#!/bin/bash
+
+nameArr=("earth", "wind", "fire", "water", "light")
+
+IFS=$'\n'           ## only word-split on '\n'
+nameArr=( $(printf "%s\n" ${nameArr[@]} | sort ) )  ## reverse sort
+
+declare -p nameArr  ## simply output the array

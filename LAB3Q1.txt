@@ -1,0 +1,17 @@
+#!/bin/bash
+        echo -n "Enter 1st number:  "
+        read a
+        echo -n "Enter 2st number:  "
+        read b
+
+        if [ $a -lt 10 -a $b -lt 10 ]
+        then
+               for i in $a $b
+                do
+                       echo "You entered: $i"
+               done
+       else
+
+        ans=$(($a + $b))
+        echo "Your inputs  were more than 10 by default we added them together:  $ans"
+        fi

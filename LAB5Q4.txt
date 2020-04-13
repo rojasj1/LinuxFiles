@@ -1,0 +1,14 @@
+#!/bin/bash
+echo  "Enter a number for your matrix :"
+read num
+row=$num
+column=$num
+
+for ((i=0; i<$column; i++))
+do
+        for ((j=0; j<$row; j++))
+        do
+                printf "*"
+        done
+printf "\n"
+done

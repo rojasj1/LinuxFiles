@@ -1,0 +1,24 @@
+#!/bin/bash
+clear ; loop=y
+while [ "$loop" = y ] ;
+do
+echo "Physical acitivity Daily Schedule";
+echo "================"
+echo "M: Monday Cardio"
+echo "T: Tuesday Arms"
+echo "W: Hump Day Leg Day"
+echo "R: Crunch Time Abs"
+echo "F: Back on some Lats"
+echo "ST: Cardio"
+echo "SUN: REST"
+echo "Q: quit."
+echo "=============="
+read  choice
+case $choice in
+        M | m) echo "60 minute tredmill run" ;;
+        T | t) echo "Arm Curls";;
+        W | w) echo "Squats" ;;
+        R | r) echo "Crunches" ;;
+        F | f) echo "Lat Pulldown";;
+        ST | st) echo "Go for a swim";;
+

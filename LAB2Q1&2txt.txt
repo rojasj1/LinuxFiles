@@ -1,0 +1,23 @@
+#!/bin/bash
+echo "Check if file is accepted and exists"
+echo "---------------------------------------------"
+echo -n "Enter filename: "
+read filename
+if [[ -e $filename ]];  then
+        echo "File name exists"
+        var2="$(date +%Y)"
+        var="${filename}.bak${var2}"
+        if [[ -e $var ]]; then
+                echo "Would you like to replace it?"
+                read input
+
+                if [[ $input == "y" ]]; then
+                        cp $filename $var
+                        echo "file replaced"
+                        echo "$input"   
+                elif [[ $input == "n" ]]; then
+                        echo "No Worries"                               
+                        exit
+                fi
+        else
+                cp $filename $var
